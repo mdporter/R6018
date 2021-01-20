@@ -1,0 +1,18 @@
+Package: R6018
+Type: Package
+Title: Functions and Formats for SYS-6018
+Version: 0.1.0
+Author: Michael D. Porter
+Maintainer: Michael D. Porter <mdp2u@virginia.edu>
+Description: Functions, data, and Rmarkdown formatting for students of SYS-6018
+    at the University of Virginia.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    knitr,
+    rmarkdown,
+    pander
+RoxygenNote: 7.1.1
