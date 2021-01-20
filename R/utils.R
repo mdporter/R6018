@@ -34,12 +34,12 @@ tidy.rules <- function(x){
     rhs = arules::labels(x@rhs),
     x@quality,
     stringsAsFactors = FALSE)
-  if(requireNamespace(tibble::tibble)) tibble::as_tibble(out) else out
+  if(requireNamespace("tibble", quietly=TRUE)) tibble::as_tibble(out) else out
 }
 
 #' @describeIn apriori2df Tidy a [arules::itemsets] object
 #' @export
 tidy.itemsets <- function(x){
   out = data.frame(items=arules::labels(x), x@quality, stringsAsFactors = FALSE)
-  if(requireNamespace(tibble::tibble)) tibble::as_tibble(out) else out
+  if(requireNamespace("tibble", quietly=TRUE)) tibble::as_tibble(out) else out
 }
