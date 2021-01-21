@@ -19,16 +19,19 @@ digits <- function(x, k=2) format(round(x, digits=k), nsmall=k)
 #' @return a tibble (or data.frame) of the rules/itemsets
 #' @export
 apriori2df <- function(x){
-  if(class(x) == "itemsets")   tidy.itemsets(x)
-  else if(class(x) == "rules") tidy.rules(x)
+  if(class(x) == "itemsets")   tidy(x)
+  else if(class(x) == "rules") tidy(x)
   else stop("Only works with class of itemsets or rules")
 }
 
-
+#' @importFrom generics tidy
+#' @export
+generics::tidy
 
 #' @describeIn apriori2df Tidy a [arules::rules] object
+#' @param ... Unused, included for generic consistency only.
 #' @export
-tidy.rules <- function(x){
+tidy.rules <- function(x, ...){
   out = data.frame(
     lhs = arules::labels(x@lhs),
     rhs = arules::labels(x@rhs),
@@ -38,8 +41,9 @@ tidy.rules <- function(x){
 }
 
 #' @describeIn apriori2df Tidy a [arules::itemsets] object
+#' @param ... Unused, included for generic consistency only.
 #' @export
-tidy.itemsets <- function(x){
+tidy.itemsets <- function(x, ...){
   out = data.frame(items=arules::labels(x), x@quality, stringsAsFactors = FALSE)
   if(requireNamespace("tibble", quietly=TRUE)) tibble::as_tibble(out) else out
 }

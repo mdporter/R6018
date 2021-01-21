@@ -8,13 +8,15 @@
 \usage{
 apriori2df(x)
 
-tidy.rules(x)
+\method{tidy}{rules}(x, ...)
 
-tidy.itemsets(x)
+\method{tidy}{itemsets}(x, ...)
 }
 \arguments{
 \item{x}{An object of class \link[arules:rules-class]{arules::rules} or \link[arules:itemsets-class]{arules::itemsets} produced
 by running \code{\link[arules:apriori]{arules::apriori()}}}
+
+\item{...}{Unused, included for generic consistency only.}
 }
 \value{
 a tibble (or data.frame) of the rules/itemsets
@@ -25,10 +27,10 @@ Converts output from \code{\link[arules:apriori]{arules::apriori()}} to a tibble
 \details{
 Use this instead of \code{\link[arules:inspect]{arules::inspect()}}, which only prints to screen.
 }
-\section{Functions}{
+\section{Methods (by generic)}{
 \itemize{
-\item \code{tidy.rules}: Tidy a \link[arules:rules-class]{arules::rules} object
+\item \code{tidy}: Tidy a \link[arules:rules-class]{arules::rules} object
 
-\item \code{tidy.itemsets}: Tidy a \link[arules:itemsets-class]{arules::itemsets} object
+\item \code{tidy}: Tidy a \link[arules:itemsets-class]{arules::itemsets} object
 }}
 

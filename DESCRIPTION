@@ -15,7 +15,8 @@ Imports:
     ggplot2,
     knitr,
     rmarkdown,
-    pander
+    pander,
+    generics
 Suggests:
     tibble
 RoxygenNote: 7.1.1
