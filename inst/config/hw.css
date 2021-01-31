@@ -1,3 +1,4 @@
+/* Solution Region */
 .solution {
   background-color: #232D4B10;
   border-style: solid;
@@ -7,15 +8,26 @@
   margin: 20px
 }
 
+/* Homework Title */
+h1.title {
+   font-size: 1.8em;
+   border-bottom: none;
+   padding-bottom: none;
+}
+
+/* h1 is main question */
 h1 {
    font-size: 1.4em;
    font-weight: bold;
+   border-bottom: 1px solid #C0C0C0;
+   padding-bottom: none;
 }
 
+/* h2 is subsection */
 h2 {
    font-size:1.0em;
-   padding-left: 2.5em;
-   text-indent:-1.5em;
+   padding-left:1.5em;
+   text-indent:-1.2em;
 }
 
 h3 {
@@ -32,4 +44,29 @@ h5 {
 
 h6 {
    font-size:0.7em;
+}
+
+
+/* Adjust horizontal spacing */
+
+p {
+  padding-left: 1.5em;
+}
+
+.solution p {
+  margin-left: -1.25em;
+}
+
+li p {
+  padding-left: 0;
+}
+
+pre {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.solution pre{
+  margin-left: 0;
+  margin-right: 0;
 }
